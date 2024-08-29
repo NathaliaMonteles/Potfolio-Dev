@@ -1,6 +1,5 @@
 #pag1 {
   max-width: auto;
-  margin-inline: auto;
   background-image: url("/assets/background/Background_Intro.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -17,7 +16,6 @@
   background-color: rgba(0, 0, 0, 0); /* Fundo semi-transparente para melhor contraste */
   color: white; /* Cor do texto na caixa */
   margin-top: 90px;
-
   box-sizing: border-box; /* Inclui padding e border na largura e altura total */
   display: flex;
   flex-direction: column;
@@ -78,18 +76,16 @@ figure .red {
 
 #pag2 {
   max-width: auto;
-  margin-inline: auto;
   height: 917px;
-  margin: 72px 120px 144px 120px;
-  display: grid;
-  gap: 32px;
+  padding: 72px 120px 134px 120px;
   background-color: var(--gray-200);
+  display: flex;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: (2, auto);
+  grid-template-columns: repeat(3, 346px);
+  justify-items: center;
 }
 
 .infos {
@@ -112,7 +108,7 @@ figure .red {
 }
 
 .projetos {
-  max-width: 1040px;
+  max-width: auto;
   grid-column: 1 / -1; /* Faz com que o item ocupe todas as 3 colunas */
   /* Os itens projetos vão ocupar uma coluna cada */
   display: flex; /* Alinha o conteúdo do projeto */
@@ -150,11 +146,45 @@ figure .red {
   height: 280px;
   border-radius: 12px;
 
-  padding: 12px 12px 80px 12px;
-  margin: 0 12px 0 12px;
-
+  margin-bottom: 12px;
+  padding: 10px 10px 80px 10px;
+  max-width: auto;
 }
 
-.box2 {
+#pag3 {
+  max-width: auto;
+  margin-inline: auto;
+  height: 480px;
+  display: flex;
 
+  background-color: var(--gray-100);
 }
+
+.informacoes {
+  width: 355px;
+  height: 61px;
+  margin-top: 33px;
+  color: white;
+}
+
+.boxservicos {
+  width: 280px;
+  height: 155px;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: white;
+  border-radius: 12px;
+}
+
+#pag4 {
+  max-width: auto;
+  margin-inline: auto;
+  height: 787px;
+
+  background-color: var(--gray-200);
+
+  background-image: url("/assets/background/Background_Contacts.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+

@@ -23,6 +23,30 @@
   justify-content: center;
 }
 
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  width: 97px;
+  height: 97px;
+  position: relative;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.iconcircle {
+  position: absolute;
+  top: 70%;
+  left: 59.8%;
+  max-width: 32px;
+}
+
 .subtitle {
   font: var(--subtitle-inconsolata);
   margin-top: 56px;
@@ -75,56 +99,70 @@ figure .red {
 }
 
 #pag2 {
-  max-width: auto;
-  height: 917px;
+  display: block;
+  /* max-width: auto; */
+  height: auto;
   padding: 72px 120px 134px 120px;
   background-color: var(--gray-200);
-  display: flex;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 346px);
-  justify-items: center;
+  box-sizing: border-box;
 }
 
 .infos {
   margin-bottom: 56px;
 
-  max-width: 1040px;
+  max-width: auto;
   height: 61px;
-
+  
   text-align: center;
+  /* justify-content: center;
+  align-content: center; */
 
   p {
     font: var(--subtitle-inconsolata);
     color: var(--red);
+    text-align: center;
   }
 
   h4 {
     font: var(--title-md-asap);
     color: white;
+    text-align: center;
   }
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  justify-content: center;
+  padding: 12px 12px 0 12px;
+  gap: 24px;
+  margin-inline: auto;
+}
+
 .projetos {
-  max-width: auto;
-  grid-column: 1 / -1; /* Faz com que o item ocupe todas as 3 colunas */
-  /* Os itens projetos vão ocupar uma coluna cada */
-  display: flex; /* Alinha o conteúdo do projeto */
-  flex-direction: column; /* Alinha o conteúdo verticalmente */
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
-  text-align: center;
+  max-width: 100%;
+  display: flex;
+  /* grid-column: 1 / -1; Faz com que o item ocupe todas as 3 colunas */
+  align-items: center; 
+  text-align: start;
+  flex-wrap: wrap;
+  /* justify-content: center; */
 
   p {
-    width: 298px;
+    width: 100%;
     height: 40px;
     color: var(--gray-500);
+    font: var(--text-sm-maven);
+    margin-left: 5px;
   }
 
   h6 {
+    margin-top: 24px;
     color: var(--gray-500);
     font: var(--title-sm-asap);
+    margin-left: 5px;
+    margin-bottom: 10px;
   }
 
   img {
@@ -141,44 +179,97 @@ figure .red {
 }
 
 .boxprojetos {
-  background-color: var(--gray-100);
-  width: 330px;
+  background-color: var(--gray-300);
+  max-width: 330px;
   height: 280px;
   border-radius: 12px;
 
-  margin-bottom: 12px;
   padding: 10px 10px 80px 10px;
-  max-width: auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 #pag3 {
   max-width: auto;
   margin-inline: auto;
-  height: 480px;
+  height: 100%;
   display: flex;
 
   background-color: var(--gray-100);
+
+  padding: 88px 120px 120px 120px;
 }
 
 .informacoes {
   width: 355px;
   height: 61px;
-  margin-top: 33px;
   color: white;
+  align-items: center;
+  justify-items: center;
+  margin-inline: auto;
+  text-align: center;
+
+  p {
+    font: var(--subtitle-inconsolata);
+    color: var(--red);
+    align-items: center;
+    justify-items: center;
+    margin-inline: auto;
+    margin-top: 33px;
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    font: var(--title-md-asap);
+    color: (--gray-600);
+    font-size: 24px;
+  }
+}
+
+.gridservico {
+  margin-inline: auto;
+  padding-top: 56px;
+  max-width: 888px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .boxservicos {
   width: 280px;
   height: 155px;
+  padding: 20px;
   background-color: rgba(0, 0, 0, 0);
-  border-color: white;
+  border: 1px solid white;
   border-radius: 12px;
+
+  img {
+    margin-bottom: 20px;
+    width: 48px;
+    height: 48px;
+  }
+
+  h6 {
+    font: var(--text-sm-maven);
+    color: var(--gray-600);
+    font-weight: bold;
+  }
+
+  p {
+    font: var(--text-sm-maven);
+    color: var(--gray-500);
+  }
+
+  .servicosroxo {
+    color: var(--purple);
+  }
 }
 
 #pag4 {
+  padding: 128px 120px 200px 128px;
   max-width: auto;
-  margin-inline: auto;
-  height: 787px;
+  height: 100%;
 
   background-color: var(--gray-200);
 
@@ -186,5 +277,62 @@ figure .red {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.tagcontact {
+  max-width: 400px;
+  height: 68px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  margin-inline: auto;
+  font: var(--text-sm-maven);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+
+  background-color: var(--gray-300);
+
+  p {
+    color: var(--gray-500);
+  }
+}
+
+.contact {
+  width: auto;
+  height: 91px;
+  color: white;
+  display: block;
+  align-items: center;
+  justify-items: center;
+  margin-inline: auto;
+  text-align: center;
+
+  h6 {
+    font: var(--subtitle-inconsolata);
+    color: var(--purple);
+    margin-bottom: 5px;
+  }
+
+  p {
+    font: var(--text-md-maven);
+    padding-block: 8px 48px;
+  }
+
+  h4 {
+    font: var(--title-md-asap);
+    font-weight: bold;
+  }
+}
+
+.redes {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+
+}
+
+#margincontact {
+  margin-top: 48px;
 }
 
